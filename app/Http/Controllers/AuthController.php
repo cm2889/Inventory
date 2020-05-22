@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
-    /**
-     * Create a new AuthController instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         $this->middleware('JWT', ['except' => ['login','signup']]);
@@ -65,6 +61,7 @@ class AuthController extends Controller
         $data['name']=$request->name;
         $data['email']=$request->email;
         $data['password'] = Hash::make($request->password);
+
         DB::table('users')->insert($data);
 
         return $this->login($request);

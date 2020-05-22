@@ -25,7 +25,8 @@
 
 <body id="page-top">
     <div id="app">
-        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <nav class="navbar navbar-expand navbar-dark bg-dark static-top"id="topbar"
+             v-show="$route.path === '/' || $route.path === '/register' || $route.path ==='/forget' ? false : true "  style="display: none;">
 
             <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
 
@@ -93,33 +94,33 @@
         <div id="wrapper">
 
             <!-- Sidebar -->
-            <ul class="sidebar navbar-nav">
+            <ul class="sidebar navbar-nav" id="leftbar"  v-show="$route.path === '/' || $route.path === '/register' || $route.path ==='/forget' ? false : true "  style="display: none;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <router-link class="nav-link" to="home">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Employee</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <h6 class="dropdown-header">Login Screens:</h6>
-                        <a class="dropdown-item" href="login.html">Login</a>
-                        <a class="dropdown-item" href="register.html">Register</a>
-                        <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-header">Other Pages:</h6>
-                        <a class="dropdown-item" href="404.html">404 Page</a>
-                        <a class="dropdown-item" href="blank.html">Blank Page</a>
+                        <router-link class="dropdown-item" to="/store-employee">Add Employee</router-link>
+                        <router-link class="dropdown-item" to="/employee">All Employee</router-link>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="charts.html">
-                        <i class="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Supplier</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <router-link class="dropdown-item" to="/store-supplier">Add Supplier</router-link>
+                        <router-link class="dropdown-item" to="/supplier">All Supplier</router-link>
+
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tables.html">
@@ -184,6 +185,14 @@
 
     <script src="{{ asset('js/app.js')}}"></script>
 <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
+    <script type="text/javascript">
+        let token = localStorage.getItem('token');
+        if (token) {
+            $("#topbar").css("display","");
+            $("#leftbar").css("display","");
+        }
+
+    </script>
 {{--<script src="{{asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>--}}
 
 <!-- Core plugin JavaScript-->
