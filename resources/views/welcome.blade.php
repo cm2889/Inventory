@@ -134,6 +134,28 @@
                     </div>
                 </li>
 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Expense</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <router-link class="dropdown-item" to="/store-expense">Add Expense</router-link>
+                        <router-link class="dropdown-item" to="/expense">All Expense</router-link>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Product</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <router-link class="dropdown-item" to="/store-product">Add product</router-link>
+                        <router-link class="dropdown-item" to="/product">All Product</router-link>
+                    </div>
+                </li>
+
             </ul>
 
             <div id="content-wrapper">
