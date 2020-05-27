@@ -133,6 +133,16 @@
                         <router-link class="dropdown-item" to="/category">All Category</router-link>
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Customer</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <router-link class="dropdown-item" to="/store-customer">Add Customer</router-link>
+                        <router-link class="dropdown-item" to="/customer">All Customer</router-link>
+                    </div>
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -153,6 +163,28 @@
                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <router-link class="dropdown-item" to="/store-product">Add product</router-link>
                         <router-link class="dropdown-item" to="/product">All Product</router-link>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Salary</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <router-link class="dropdown-item" to="/given-salary">Pay Salary</router-link>
+                        <router-link class="dropdown-item" to="/salary">All Salary</router-link>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Stock</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <router-link class="dropdown-item" to="/stock">Stock</router-link>
+                        {{--<router-link class="dropdown-item" to="/salary">All Salary</router-link>--}}
                     </div>
                 </li>
 
