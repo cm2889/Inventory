@@ -14,6 +14,9 @@ let storesupplier = require('./components/supplier/create.vue').default;
 let supplier = require('./components/supplier/index.vue').default;
 let editsupplier = require('./components/supplier/edit.vue').default;
 
+//point of sale
+let pos = require('./components/pos/pointofsale.vue').default;
+
 //category----
 let storecategory = require('./components/category/create.vue').default;
 let category = require('./components/category/index.vue').default;
@@ -94,7 +97,8 @@ let home=require('./components/home').default;
        { path: '/view-salary/:id', component: viewsalary, name:'view-salary' },
        { path: '/edit-salary/:id', component: editsalary, name:'edit-salary' },
 
-
+       //point of sale--
+       { path: '/pos', component: pos, name:'pos' },
 
 
 

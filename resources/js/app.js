@@ -13,6 +13,9 @@ window.Vue = require('vue');
 import User from './Helpers/User';
 window.User = User
 
+// Reload
+window.Reload = new Vue();
+
 //import Notification class
 import Notification from './Helpers/Notification';
 window.Notification = Notification
